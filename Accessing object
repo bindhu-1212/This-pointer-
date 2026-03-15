@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class Complex
+{
+    int real,imag;
+    public:
+    Complex()
+    {
+        real= 0;
+        imag = 0;
+    }
+    Complex(int r,int i)
+    {
+        real = r;
+        imag = i;
+    }
+    Complex cal(Complex mat)
+    {
+        real=real+mat.real;
+        imag=imag+mat.imag;
+        return *this;
+    }
+    void show()
+    {
+        cout<<real<<" + "<<imag;
+    }
+};
+int main()
+{
+    Complex c3;
+    int r,i;
+    cout<<"Enter the input ";
+    cin>>r>>i;
+    Complex c1(r,i);
+    Complex c2(6,5);
+    c1.cal(c2);
+     c1.show();
+    
+}
