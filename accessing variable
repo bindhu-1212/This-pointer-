@@ -1,0 +1,21 @@
+//. use when class member and functions 
+parameters are same.
+#include<iostream>
+using namespace std;
+class Sol
+{
+    private:
+    int radi;
+    public:
+    void cal(int radi)
+    {
+        this->radi=radi;
+        cout<<"Area of the circle "<<3.14*radi*radi;
+    }
+};
+int main()
+{
+    Sol s1;
+    s1.cal(6);
+    
+}
